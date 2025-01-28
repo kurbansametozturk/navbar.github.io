@@ -1,0 +1,146 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    background-color: #222327;
+}
+ body{
+    min-height: 100vh;
+    background: #fff;
+ }
+
+ header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+ }
+ .logo{
+    display: flex;
+    align-items: center;
+ }
+ .logo i{
+    color: #29fd53;
+    font-size: 28px;
+    margin-right: 3px;
+ }
+
+ .logo span{
+    font-size: 1.7rem;
+    font-weight: 600;
+ }
+ .navbar {
+    display: flex;
+ }
+ .navbar a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+    color: #000;
+ }
+ .navbar a:hover {
+    color: #29fd53;
+ }
+ .navbar a.active{
+    color: #29fd53;
+ }
+ .main {
+    display: flex;
+    align-items: center;
+ }
+ .main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+    color: #000;
+ }
+ .user {
+    display: flex;
+    align-items: center;
+ }
+ .user i {
+    font-size: 28px;
+    margin-right: 7px;
+    color: #29fd53;
+ }
+ .main a:hover{
+    color: #29fd53;
+ }
+ #menu-icon{
+    font-size: 35px;
+    color: #29fd53;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+ }
+
+ @media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px;
+        margin: 0px 20px;
+    }
+ }
+
+
+    @media (max-width: 1090px) {
+        #menu-icon {
+            display: block;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    
+        .navbar {
+            position: absolute;
+            top: 100%;
+            right: -100%; /* Başlangıçta gizli */
+            width: 270px;
+            background-color: #4a7272;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+    
+        .navbar.active {
+            right: 10px; /* Açıldığında görünür hale gelir */
+        }
+    
+        .navbar a {
+            display: block;
+            margin: 12px 0;
+            padding: 0px 25px;
+            transition: all 0.5s ease;
+            color: white;
+            text-decoration: none;
+        }
+    
+        .navbar a:hover {
+            transform: translateY(5px);
+        }
+    }
+    
+
+    
